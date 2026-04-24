@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Digital Whiteboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <div class="toolbar-section">
+                <h1>Digital Whiteboard</h1>
+            </div>
+            
+            <div class="toolbar-section">
+                <button id="penBtn" class="tool-btn active" title="Pen Tool">
+                    ✏️ Pen
+                </button>
+                <button id="eraserBtn" class="tool-btn" title="Eraser Tool">
+                    🧹 Eraser
+                </button>
+            </div>
+
+            <div class="toolbar-section">
+                <label for="colorPicker">Color:</label>
+                <input type="color" id="colorPicker" value="#00ff88" title="Choose pen color">
+            </div>
+
+            <div class="toolbar-section">
+                <label for="sizePicker">Size (Px):</label>
+                <input type="range" id="sizePicker" min="1" max="50" value="3" title="Adjust brush size">
+                <span id="sizeDisplay">3</span>
+            </div>
+
+            <div class="toolbar-section">
+                <button id="clearBtn" class="action-btn" title="Clear entire canvas">
+                    🗑️ Clear
+                </button>
+                <button id="saveBtn" class="action-btn" title="Save to localStorage">
+                    💾 Save
+                </button>
+                <button id="loadBtn" class="action-btn" title="Load from localStorage">
+                    📂 Load
+                </button>
+                <button id="downloadBtn" class="action-btn" title="Download as PNG">
+                    ⬇️ Download
+                </button>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="whiteboard"></canvas>
+        </div>
+
+        <div class="status-bar">
+            <span id="statusMessage">Ready to draw</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
